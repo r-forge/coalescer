@@ -1,0 +1,8 @@
+useDynLib(coalesceR)
+
+export(simulate.tree)
+export(plot.tree)
+export(add.mutations)
+export(heterozygosity)
+export(number.of.alleles)
+export(TMRCA)
