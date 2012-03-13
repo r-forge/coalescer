@@ -1,24 +1,24 @@
 getwd()
 scan('../inst/data.dat')
 data <- scan('../inst/data.dat')
-	data <- scan(infile)
+data <- scan(infile)
 data
-	pop_by_rows <- data[1]
+pop_by_rows <- data[1]
 pop_by_rows
 infile <- '../inst/data.dat'
-	raw <- scan(infile)#
+raw <- scan(infile)#
 	pop_by_rows <- data[1]#
 	data$npops <- data[2]#
 	data$nloci <- data[3]
 data
-	raw <- scan(infile)#
+raw <- scan(infile)#
 	pop_by_rows <- raw[1]#
 	data$npops <- raw[2]#
 	data$nloci <- raw[3]
 raw
 data
 rm(data)
-	raw <- scan(infile)#
+raw <- scan(infile)#
 	pop_by_rows <- raw[1]#
 	data$npops <- raw[2]#
 	data$nloci <- raw[3]
@@ -26,15 +26,15 @@ data
 raw
 data$nloci
 ?list
-	raw <- scan(infile)#
+raw <- scan(infile)#
 	data <- list(npops, nloci)#
 #
 	pop_by_rows <- raw[1]#
 	data$npops <- raw[2]#
 	data$nloci <- data[3]
 data
-	raw <- scan(infile)
-	data <- list(npops,nloci)
+raw <- scan(infile)
+data <- list(npops,nloci)
 a <- list(b,c)
 b <- 2
 a <- list(b,c)
@@ -42,41 +42,37 @@ a
 data <- list()
 data
 data <- list(truc, machin)
-	raw <- scan(infile)
-	data <- list(npops = raw[2],nloci = raw[3])
+raw <- scan(infile)
+data <- list(npops = raw[2],nloci = raw[3])
 data
-	number_of_alleles <- {}#
+number_of_alleles <- {}#
 	index_locus <- 4
-	while (index_locus <= length(raw)) {#
+while (index_locus <= length(raw)) {#
 		number_of_alleles <- append(alleles,raw[index_locus])#
 		index_locus + (number_of_alleles * data$npops) + 1#
-		#
 	}
-	number_of_alleles <- {}#
+number_of_alleles <- {}#
 	index_locus <- 4#
 	while (index_locus <= length(raw)) {#
 		number_of_alleles <- append(number_of_alleles,raw[index_locus])#
 		index_locus + (number_of_alleles * data$npops) + 1#
-		#
 	}
 number_of_alleles
 length(raw)
 index_locus
-	number_of_alleles <- {}#
+number_of_alleles <- {}#
 	index_locus <- 4#
 	while (index_locus <= length(raw)) {#
 		number_of_alleles <- append(number_of_alleles,raw[index_locus])#
 		index_locus <- index_locus + (number_of_alleles * data$npops) + 1#
-		#
 	}
 index_locus
-	number_of_alleles <- {}#
+number_of_alleles <- {}#
 	index_locus <- 4#
 	while (index_locus <= length(raw)) {#
 		tmp <- raw[index_locus]#
 		number_of_alleles <- append(number_of_alleles,tmp)#
 		index_locus <- index_locus + (tmp * data$npops) + 1#
-		#
 	}
 number_of_alleles
 length(number_of_alleles)
@@ -93,7 +89,6 @@ get.data.information <- function(infile) {#
 		tmp <- raw[index_locus]#
 		number_of_alleles <- append(number_of_alleles,tmp)#
 		index_locus <- index_locus + (tmp * raw[2]) + 1#
-		#
 	}#
 	data <- list(npops = raw[2],nloci = raw[3],alleles = number_of_alleles)#
 	return(data)#
@@ -105,14 +100,14 @@ unique(number_of_alleles)
 unique(number_of_alleles) == 2
 unique(number_of_alleles) == 3
 + 	data <- list(npops = raw[2],nloci = raw[3],alleles = number_of_alleles)
-	data <- list(npops = raw[2],nloci = raw[3],alleles = number_of_alleles)
+data <- list(npops = raw[2],nloci = raw[3],alleles = number_of_alleles)
 data$number_of_alleles
 number_of_alleles
 data$alleles
 unique(number_of_alleles)
 get.data.information(infile)
 unique(number_of_alleles)
-	raw <- scan(infile)#
+raw <- scan(infile)#
 	pop_by_rows <- raw[1]#
 	number_of_alleles <- {}#
 	index_locus <- 4#
@@ -120,26 +115,24 @@ unique(number_of_alleles)
 		tmp <- raw[index_locus]#
 		number_of_alleles <- append(number_of_alleles,tmp)#
 		index_locus <- index_locus + (tmp * raw[2]) + 1#
-		#
 	}
 number_of_alleles
 unique(number_of_alleles)
 unique(number_of_alleles) == 2
 length(unique(number_of_alleles))
-	if (length(unique(number_of_alleles) < 2)) {#
+if (length(unique(number_of_alleles) < 2)) {#
 		if(unique(number_of_alleles) == 2) {#
 			biallelic = TRUE#
 		}#
 	}
 length(unique(number_of_alleles) < 2)
-#
-	if (length(unique(number_of_alleles)) < 2) {#
+if (length(unique(number_of_alleles)) < 2) {#
 		if(unique(number_of_alleles) == 2) {#
 			biallelic = TRUE#
 		}#
 	}
 biallelic
-	data <- get.data.information(infile)#
+data <- get.data.information(infile)#
 	if (data$biallelic) {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci',sep = ''))#
 	}#
@@ -156,7 +149,6 @@ get.data.information <- function(infile) {#
 		tmp <- raw[index_locus]#
 		number_of_alleles <- append(number_of_alleles,tmp)#
 		index_locus <- index_locus + (tmp * raw[2]) + 1#
-		#
 	}#
 	if (length(unique(number_of_alleles)) < 2) {#
 		if(unique(number_of_alleles) == 2) {#
@@ -169,7 +161,7 @@ get.data.information <- function(infile) {#
 	data <- list(npops = raw[2],nloci = raw[3],alleles = number_of_alleles,biallelic = biallelic)#
 	return(data)#
 }
-	data <- get.data.information(infile)#
+data <- get.data.information(infile)#
 	if (data$biallelic) {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci',sep = ''))#
 	}#
@@ -178,12 +170,12 @@ get.data.information <- function(infile) {#
 		message(paste('with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))#
 	}
 data$biallelic
-		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci',sep = ''))
-		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci,',sep = '')
+message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci',sep = ''))
+message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci,',sep = '')
 )
-		message(paste('with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))
-		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))
-	data <- get.data.information(infile)#
+message(paste('with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))
+message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))
+data <- get.data.information(infile)#
 	if (data$biallelic) {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci',sep = ''))#
 	}#
@@ -191,91 +183,90 @@ data$biallelic
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))#
 	}#
 	message(paste('The data file ',infile,' contains ',toString(data$npops),' populations',sep = ''))
-		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))
-		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci',sep = ''))
-		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))
-	message(paste('The data file ',infile,' contains ',toString(data$npops),' populations',sep = ''))
-	data <- get.data.information(infile)
-	if (data$biallelic) {#
+message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))
+message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci',sep = ''))
+message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))
+message(paste('The data file ',infile,' contains ',toString(data$npops),' populations',sep = ''))
+data <- get.data.information(infile)
+if (data$biallelic) {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci',sep = ''))#
 	}#
 	else {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))#
 	}#
 	message(paste('The data file ',infile,' contains ',toString(data$npops),' populations',sep = ''))
-	data <- get.data.information(infile)#
+data <- get.data.information(infile)#
 	if (data$biallelic) {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci',sep = ''))#
 	} else {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus',sep = ''))#
 	}#
 	message(paste('The data file ',infile,' contains ',toString(data$npops),' populations',sep = ''))
-	data <- get.data.information(infile)#
+data <- get.data.information(infile)#
 	if (data$biallelic) {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci, and ',toString(data$npops),' populations',sep = ''))#
 	} else {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus, and ',toString(data$npops),' populations',sep = ''))#
 	}#
 	message(paste('The data file ',infile,' contains ',,sep = ''))
-	data <- get.data.information(infile)
+data <- get.data.information(infile)
+if (data$biallelic) {#
+		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci, and ',toString(data$npops),' populations',sep = ''))#
+	} else {#
+		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus, and ',toString(data$npops),' populations',sep = ''))#
+	}
+data <- get.data.information(infile)#
 	if (data$biallelic) {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci, and ',toString(data$npops),' populations',sep = ''))#
 	} else {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus, and ',toString(data$npops),' populations',sep = ''))#
 	}
-	data <- get.data.information(infile)#
-	if (data$biallelic) {#
-		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci, and ',toString(data$npops),' populations',sep = ''))#
-	} else {#
-		message(paste('The data file ',infile,' contains ',toString(data$nloci),' loci, with ',min(data$alleles),'-',max(data$alleles),' alleles per locus, and ',toString(data$npops),' populations',sep = ''))#
-	}
-	read.table('infile.dat',skip = 1)
-	read.table('../../Tests/infile.dat',skip = 1)
-	read.table('../../Tests/infile.dat')
-	read.table('../../Tests/infile.dat',skip = 1)
+read.table('infile.dat',skip = 1)
+read.table('../../Tests/infile.dat',skip = 1)
+read.table('../../Tests/infile.dat')
+read.table('../../Tests/infile.dat',skip = 1)
 expression(italic(F)[1])
 message(expression(italic(F)[1]))
 ?message
-	message('The average values of population-specific differentiations are:')
+message('The average values of population-specific differentiations are:')
 ?table
 message('a\t')
 message('a\t bb')
-	message('Population pair\t F_1\t F_2\t'sep = '')
-	message('Population pair\t F_1\t F_2\t',sep = '')
-	message('Population pair\t F_1\t\t F_2\t\t',sep = '')
-	out <- read.table('infile.dat',skip = 1)
-	out <- read.table('../../Tests/infile.dat',skip = 1)
+message('Population pair\t F_1\t F_2\t'sep = '')
+message('Population pair\t F_1\t F_2\t',sep = '')
+message('Population pair\t F_1\t\t F_2\t\t',sep = '')
+out <- read.table('infile.dat',skip = 1)
+out <- read.table('../../Tests/infile.dat',skip = 1)
 out
 dim(out)
 out[1,2]
 out[1,3]
 out[1,1]
 out[1,4]
-	message('Population pair\t F_1\t\t F_2\t\t')
-		message(paste(toString(out[i,2]),'\t',toString(out[i,3]),sep = ''))
-	message('Population pair\t F_1\t\t F_2\t\t')
-	for (i in 1:dim(out)[1]) {#
+message('Population pair\t F_1\t\t F_2\t\t')
+message(paste(toString(out[i,2]),'\t',toString(out[i,3]),sep = ''))
+message('Population pair\t F_1\t\t F_2\t\t')
+for (i in 1:dim(out)[1]) {#
 		message(paste(toString(out[i,2]),'\t',toString(out[i,3]),sep = ''))#
 	}
-		message(paste(toString(out[i,2]),'-',toString(out[i,3]),sep = ''))
-		message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),toString(out[i,5]),sep = ''))
-	message('The average values of population-specific differentiations are:')
-	message('Population pair\t F_1\t\t F_2\t\t')
-	message('Population pair\t F_1\t\t F_2\t\t')#
+message(paste(toString(out[i,2]),'-',toString(out[i,3]),sep = ''))
+message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),toString(out[i,5]),sep = ''))
+message('The average values of population-specific differentiations are:')
+message('Population pair\t F_1\t\t F_2\t\t')
+message('Population pair\t F_1\t\t F_2\t\t')#
 	for (i in 1:dim(out)[1]) {#
 		message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),toString(out[i,5]),sep = ''))#
 	}
-		message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),toString(out[i,5]),sep = ''))
-		message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),'\t\t',toString(out[i,5]),sep = ''))
-	out <- read.table('infile.dat',skip = 1)#
+message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),toString(out[i,5]),sep = ''))
+message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),'\t\t',toString(out[i,5]),sep = ''))
+out <- read.table('infile.dat',skip = 1)#
 	message('The average values of population-specific differentiations are:')#
-	#
 	message('Population pair\t F_1\t\t F_2\t\t')#
 	for (i in 1:dim(out)[1]) {#
 		message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),'\t\t',toString(out[i,5]),sep = ''))#
 	}
-		message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),'\t',toString(out[i,5]),sep = ''))
-	data <- get.data.information(infile)#
+message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),'\t',toString(out[i,5]),sep = ''))
+data <- get.data.information(infile)#
 	if (data$biallelic) {#
 		message(paste('The data file ',infile,' contains ',toString(data$nloci),' biallelic loci, and ',toString(data$npops),' populations',sep = ''))#
 	} else {#
@@ -283,7 +274,6 @@ out[1,4]
 	}#
 	out <- read.table('infile.dat',skip = 1)#
 	message('The average values of population-specific differentiations are:')#
-	#
 	message('Population pair\t F_1\t\t F_2\t\t')#
 	for (i in 1:dim(out)[1]) {#
 		message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),'\t',toString(out[i,5]),sep = ''))#
@@ -291,40 +281,38 @@ out[1,4]
 message('a\tb')
 message('a\tb\t\tc')
 message('aaa\tb\t\tc')
-	message('Population pair\tF_1\t\tF_2\t\t')#
+message('Population pair\tF_1\t\tF_2\t\t')#
 	for (i in 1:dim(out)[1]) {#
 		message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',toString(out[i,4]),'\t',toString(out[i,5]),sep = ''))#
 	}
 format(out[i,4],digits = 3)
-		message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',format(out[i,4],digits = 3),'\t',format(out[i,5],digits = 3),sep = ''))
-	message('Population pair\tF_1\t\tF_2\t\t')#
+message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',format(out[i,4],digits = 3),'\t',format(out[i,5],digits = 3),sep = ''))
+message('Population pair\tF_1\t\tF_2\t\t')#
 	for (i in 1:dim(out)[1]) {#
 		message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',format(out[i,4],digits = 3),'\t',format(out[i,5],digits = 3),sep = ''))#
 	}
-	message('Pair\tF_1\t\tF_2\t\t')
-	for (i in 1:dim(out)[1]) {#
+message('Pair\tF_1\t\tF_2\t\t')
+for (i in 1:dim(out)[1]) {#
 		message('\t\t',paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',format(out[i,4],digits = 3),'\t',format(out[i,5],digits = 3),sep = ''))#
 	}
-		message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',format(out[i,4],digits = 3),'\t',format(out[i,5],digits = 3),sep = ''))
-	message('Pair\tF_1\t\tF_2\t\t')
-		message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',format(out[i,4],digits = 3),'\t',format(out[i,5],digits = 3),sep = ''))
-	message('Pair\t\tF_1\t\t\tF_2\t\t')
-		message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t\t',format(out[i,4],digits = 3),'\t\t',format(out[i,5],digits = 3),sep = ''))
-	message('The average values of population-specific differentiations are:')#
-	#
+message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',format(out[i,4],digits = 3),'\t',format(out[i,5],digits = 3),sep = ''))
+message('Pair\tF_1\t\tF_2\t\t')
+message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t',format(out[i,4],digits = 3),'\t',format(out[i,5],digits = 3),sep = ''))
+message('Pair\t\tF_1\t\t\tF_2\t\t')
+message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t\t',format(out[i,4],digits = 3),'\t\t',format(out[i,5],digits = 3),sep = ''))
+message('The average values of population-specific differentiations are:')#
 	message('Pair\t\tF_1\t\t\tF_2\t\t')#
 	for (i in 1:dim(out)[1]) {#
 		message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t\t',format(out[i,4],digits = 3),'\t\t',format(out[i,5],digits = 3),sep = ''))#
 	}
-	message('The average values of population-specific measures of differentiation are:')#
-	#
+message('The average values of population-specific measures of differentiation are:')#
 	message('Pair\t\tF_1\t\t\tF_2\t\t')#
 	for (i in 1:dim(out)[1]) {#
 		message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t\t',format(out[i,4],digits = 3),'\t\t',format(out[i,5],digits = 3),sep = ''))#
 	}
-	message('--------------------------------------------------------------------------')
-	message('The average values of population-specific measures of differentiation are:')
-	out <- read.table('infile.dat',skip = 1)#
+message('--------------------------------------------------------------------------')
+message('The average values of population-specific measures of differentiation are:')
+out <- read.table('infile.dat',skip = 1)#
 	message('--------------------------------------------------------------------------')#
 	message('The average values of population-specific measures of differentiation are:')#
 	message('Pair\t\tF_1\t\t\tF_2\t\t')#
@@ -332,28 +320,27 @@ format(out[i,4],digits = 3)
 		message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t\t',format(out[i,4],digits = 3),'\t\t',format(out[i,5],digits = 3),sep = ''))#
 	}#
 	message('--------------------------------------------------------------------------')
-	message('------------------------------')#
+message('------------------------------')#
 	message('The average values of population-specific measures of differentiation are:')#
 	message('Pair\t\tF_1\t\t\tF_2\t\t')#
 	for (i in 1:dim(out)[1]) {#
 		message(paste(toString(out[i,2]),'-',toString(out[i,3]),'\t\t\t',format(out[i,4],digits = 3),'\t\t',format(out[i,5],digits = 3),sep = ''))#
 	}#
 	message('------------------------------')
-	#
-	if(!file.exists('infile.dat')) {#
+if(!file.exists('infile.dat')) {#
 		stop(paste('Problem reading file ',infile,'... Program stopped.',sep = ''))#
 	}
-	parameterfile <- 'parameters.dat'
+parameterfile <- 'parameters.dat'
 parameterfile
-	if(!file.exists(parameterfile)) {#
+if(!file.exists(parameterfile)) {#
 		stop(paste('The file ', parameterfile,' does not exist. You must run read.data() first...',sep = ''))#
 	}
 parameterfile
-	parameterfile <- '../../Tests/parameters.dat'
-	if(!file.exists(parameterfile)) {#
+parameterfile <- '../../Tests/parameters.dat'
+if(!file.exists(parameterfile)) {#
 		stop(paste('The file ', parameterfile,' does not exist. You must run read.data() first...',sep = ''))#
 	}
-	datafile <- scan(file = parameterfile,what = character(0),skip = 0,n = 1,quiet = TRUE)#
+datafile <- scan(file = parameterfile,what = character(0),skip = 0,n = 1,quiet = TRUE)#
 	dominance <- scan(file = parameterfile,what = integer(0),skip = 1,n = 1,quiet = TRUE)#
 	if(dominance) {#
 		a <- scan(file = parameterfile,what = double(0),skip = 2,n = 2,quiet = TRUE)#
@@ -366,28 +353,28 @@ a
 datafile
 dominance
 maf
-	datafile <- scan(file = parameterfile,what = character(0),skip = 0,n = 1,quiet = TRUE)#
+datafile <- scan(file = parameterfile,what = character(0),skip = 0,n = 1,quiet = TRUE)#
 	dominance <- scan(file = parameterfile,what = integer(0),skip = 1,n = 1,quiet = TRUE)#
 	maf <- scan(file = parameterfile,what = double(0),skip = 2,n = 1,quiet = TRUE)#
 	if(dominance) {#
 		a <- scan(file = parameterfile,what = double(0),skip = 3,n = 2,quiet = TRUE)#
 		b <- scan(file = parameterfile,what = double(0),skip = 4,n = 3,quiet = TRUE)#
 	}
-	write(as.character(infile), file = parameterfile)#
+write(as.character(infile), file = parameterfile)#
 	write(as.integer(dominance), file = parameterfile,append = TRUE)#
 	write(as.double(maf), file = parameterfile,append = TRUE)#
 	if(dominance) {#
 		write(as.double(a), file = parameterfile,append = TRUE)#
 		write(as.double(b), file = parameterfile,append = TRUE)#
 	}
-	datafile <- scan(file = parameterfile,what = character(0),skip = 0,n = 1,quiet = TRUE)#
+datafile <- scan(file = parameterfile,what = character(0),skip = 0,n = 1,quiet = TRUE)#
 	dominance <- scan(file = parameterfile,what = integer(0),skip = 1,n = 1,quiet = TRUE)#
 	maf <- scan(file = parameterfile,what = double(0),skip = 2,n = 1,quiet = TRUE)#
 	if(dominance) {#
 		a <- scan(file = parameterfile,what = double(0),skip = 3,n = 2,quiet = TRUE)#
 		b <- scan(file = parameterfile,what = double(0),skip = 4,n = 3,quiet = TRUE)#
 	}
-	write(as.character(datafile), file = parameterfile)#
+write(as.character(datafile), file = parameterfile)#
 	write(as.integer(dominance), file = parameterfile,append = TRUE)#
 	write(as.double(maf), file = parameterfile,append = TRUE)#
 	if(dominance) {#
@@ -414,16 +401,13 @@ pdf(file = "toto.pdf")
 fplot(1)
 fplot(40)
 dev.off()
-#
 fplot <- function(i,pdf) {#
-	#
 	if (pdf) {#
 		plot(c(i,2i))#
 	} else {#
 		dev.new()	#
 		plot(c(i,2i))#
 	}#
-	#
 }
 fplot.single <- function(i,pdf){#
 	if (!pdf) {#
@@ -433,7 +417,6 @@ fplot.single <- function(i,pdf){#
 }#
 #
 fplot.mul <- function(pdf) {#
-	#
 	if (pdf) {#
 		pdf(file = 'toto.pdf')#
 	}#
@@ -451,8 +434,8 @@ library(DetSel)
 ?DetSel
 ?draw
 getwd()
-	maf <- scan(file = parameterfile,what = double(0),skip = 2,n = 1,quiet = TRUE)
-	if(dominance) {#
+maf <- scan(file = parameterfile,what = double(0),skip = 2,n = 1,quiet = TRUE)
+if(dominance) {#
 		a <- scan(file = parameterfile,what = double(0),skip = 3,n = 1,quiet = TRUE)#
 		b <- scan(file = parameterfile,what = double(0),skip = 4,n = 2,quiet = TRUE)#
 	}
