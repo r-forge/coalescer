@@ -20,7 +20,8 @@
 }
 \examples{
 ## This is to simulate a coalescent tree using the Hudson's algorithm, with 20 sampled lineages.
-## In this example, the current population is 100. It was 1000 before a bottleneck that occurred 50 generations ago
+## In this example, the current population is 100. It was 1000 before a bottleneck that occurred 
+## 50 generations ago
 
 tree <- sim.tree(method = "hudson",sample = 20,current = 100,ancestral = 1000,time = 50)
 

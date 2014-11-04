@@ -23,7 +23,8 @@
 
 tree <- sim.tree(method = "hudson",sample = 20,current = 100,ancestral = 1000,time = 50)
 
-## This is to generate a history, with a graphical outputs with labels, using a mutation rate of 0.001
+## This is to generate a history, with a graphical outputs with labels,
+## using a mutation rate of 0.001
 
 history <- add.mutations(tree,mu = 0.001,graphics = TRUE, labels = TRUE)
 
