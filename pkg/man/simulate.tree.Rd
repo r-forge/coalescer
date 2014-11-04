@@ -1,12 +1,12 @@
-\name{simulate.tree}
-\Rdversion{0.1}
-\alias{simulate.tree}
+\name{sim.tree}
+\Rdversion{0.2}
+\alias{sim.tree}
 \title{Simulate a Coalescent Tree}
 \description{
 Simulate a coalescent tree.
 }
 \usage{
-  simulate.tree(method,sample,current,ancestral,time)
+  sim.tree(method,sample,current,ancestral,time)
 }
 \arguments{
   \item{method}{simulation method: \sQuote{hudson} for the continuous time approximations; \sQuote{generations} for the generation-by-generation algorithm}
@@ -30,5 +30,5 @@ an object of class \sQuote{coalescent} which is a list with components:
 ## with 20 sampled lineages. In this example, the current population size
 ## is 100. It was 1000 before a bottleneck that occurred 50 generations ago
 
-tree <- simulate.tree(method = "hudson",sample = 20,current = 100,ancestral = 1000,time = 50)
+tree <- sim.tree(method = "hudson",sample = 20,current = 100,ancestral = 1000,time = 50)
 }

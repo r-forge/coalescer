@@ -1,5 +1,5 @@
 \name{coalesceR}
-\Rdversion{0.1}
+\Rdversion{0.2}
 \alias{coalesceR}
 \title{A Pedagogical Tool to Teach the Basics of Coalescent Theory}
 \description{Coalescent theory provides a powerful modeling tool for population genetics.

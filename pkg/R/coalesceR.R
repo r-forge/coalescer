@@ -127,7 +127,7 @@ read.tree <- function(infile = "",tree) {											# parse a tree in Newick for
 	return(tree)
 }
 
-simulate.tree <- function(method,sample,current,ancestral,time) {
+sim.tree <- function(method,sample,current,ancestral,time) {
 	if (method == "generations") {
 		SimulateCoalescentTree(method = 0,sample = sample,current = current,ancestral = ancestral,time = time)
 	} else if (method == "hudson") {
@@ -138,7 +138,7 @@ simulate.tree <- function(method,sample,current,ancestral,time) {
 	return(tree)
 }
 
-plot.tree <- function(tree,labels = TRUE){	
+draw.tree <- function(tree,labels = TRUE){	
 	if(!is.coalescent(tree)) {
 		stop(paste(tree," is not a valid coalescent object...",sep = ""))
 	}	
